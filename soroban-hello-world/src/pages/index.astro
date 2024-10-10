@@ -5,6 +5,7 @@ import helloWorld from "../contracts/hello_world";
 const { result } = await helloWorld.hello({ to: "me" });
 const greeting = result.join(" ");
 import ConnectWallet from '../components/ConnectWallet.astro'
+import Counter from '../components/Counter.astro';
 ---
 
 <script is:inline>var global = global || window;</script>
@@ -41,8 +42,7 @@ import ConnectWallet from '../components/ConnectWallet.astro'
 		<h1>{greeting}</h1>
 		<ConnectWallet />
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			<Counter />
 		</p>
 		<ul role="list" class="link-card-grid">
 			<Card
